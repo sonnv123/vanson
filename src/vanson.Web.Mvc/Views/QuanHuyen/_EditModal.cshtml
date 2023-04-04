@@ -1,0 +1,67 @@
+﻿@using vanson.MultiTenancy.Dto
+@using vanson.Web.Models.Common.Modals
+@model TenantDto
+@{
+    Layout = null;
+}
+@await Html.PartialAsync("~/Views/Shared/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel (L("EditQuanHuy")))
+<form name="TenantEditForm" role="form" class="form-horizontal">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <div class="modal-body">
+        <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="Tên">@L("Tên") </label>
+            <div class="col-md-9">
+                <input id="Tên" type="text" class="form-control" name="Tên" required minlength="2">
+            </div>
+        </div>
+        </div>
+        <div class="form-group row required">
+            <label class="col-md-3 col-form-table" for="name">@L("Mã")</label>
+            <div class="col-md-9">
+                 <input id="Mã" type="text" class="form-control" name="Mã" required />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="Tên Tắt">@L("Tên Tắt")</label>
+            <div class="col-md-9">
+                 <input id="Tên Tắt" name="Tên Tắt" value="true" />
+                 </div>
+                 </div>
+            <div class="form-group row required">
+                <label class="col-md-3 col-form-label" for="Tỉnh Thành Mã">@L("Tỉnh Thành Mã") </label>
+                <div class="col-md-9">
+                    <input id="Tên" type="text" class="form-control" name="Tỉnh Thành Mã" required />
+                </div>
+                </div>
+        <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="Quận Huyện Bắt Đầu">@L("Quận Huyện Bắt Đầu") </label>
+            <div class="col-md-9">
+                <input id="Tên" type="text" class="form-control" name="Quận Huyện Bắt Đầu" required />
+            </div>
+            </div>
+                <div class="form-group row required">
+                    <label class="col-md-3 col-form-label" for="Quận Huyện Kết Thúc">@L("Quận Huyện Kết Thúc") </label>
+                    <div class="col-md-9">
+                        <input id="Tên" type="text" class="form-control" name="Quận Huyện Kết Thúc" required />
+                    </div>
+           <div class="form-group row required">
+              <label class="col-md-3 col-form-label" for="Quận Huyện Hiệu Lực">@L("Quận Huyện Hiệu Lực") </label>
+                 <div class="col-md-9">
+                <input id="Tên" type="text" class="form-control" name="Quận Huyện Hiệu Lực" required />
+                 </div>
+        </div>
+    </div>
+    @await Html.PartialAsync("~/Views/Shared/Modals/_ModalFooterWithSaveAndCancel.cshtml")
+
+</form>
+    <script src="~/view-resources/Views/QuanHuyen/_EditModal.js" asp-append-version="true"></script>
+    
+
+
+   
+
+
+
+
+
+
